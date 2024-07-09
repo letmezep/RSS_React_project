@@ -1,7 +1,7 @@
 {
   "name": "my-react-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -29,7 +29,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'Husky is working!'"
+      "pre-commit": "echo \"Error: no test specified\""
     }
   },
   "lint-staged": {
