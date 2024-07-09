@@ -31,6 +31,12 @@
     "hooks": {
       "pre-commit": "echo 'Husky is working!'"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
+
 
 }
