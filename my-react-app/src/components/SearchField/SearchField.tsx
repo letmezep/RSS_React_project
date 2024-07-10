@@ -6,6 +6,7 @@ function SearchField() {
             <h3>
                 Search Field
             </h3>
+            <button>SEARCH</button>
         </>
     );
 }
