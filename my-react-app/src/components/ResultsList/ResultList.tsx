@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import getListFromApi from "../../services/api/getApiList"
+import getListFromApi from "../../services/api/getApiList";
+import { Character, Data } from "../../services/interfaces";
 
 function ResultList() {
-    const [data, setData] = useState<string>('');
+    const [data, setData] = useState<Data>({ results: [] });
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,11 +19,14 @@ function ResultList() {
             <h3>
                 Main Field
             </h3>
-            {data && (
+            {data.results && (
                 <div>
-                    {Object.entries(data).map(([key, value]) => (
-                        <div key={key}>
-                            <p><strong>{key}:</strong> {value}</p>
+                    {data.results.map((item: Character, index: number) => (
+                        <div key={index}>
+                            <h4>{item.name}</h4>
+                            <p>Height: {item.height}</p>
+                            <p>Mass: {item.mass}</p>
+                            <p>Hair Color: {item.hair_color}</p>
                         </div>
                     ))}
                 </div>
