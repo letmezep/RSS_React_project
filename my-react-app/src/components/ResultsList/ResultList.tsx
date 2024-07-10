@@ -24,9 +24,7 @@ function ResultList() {
                     {data.results.map((item: Character, index: number) => (
                         <div key={index}>
                             <h4>{item.name}</h4>
-                            <p>Height: {item.height}</p>
-                            <p>Mass: {item.mass}</p>
-                            <p>Hair Color: {item.hair_color}</p>
+                            <p>Height: {item.height} Mass: {item.mass} Hair Color: {item.hair_color}</p>
                         </div>
                     ))}
                 </div>
